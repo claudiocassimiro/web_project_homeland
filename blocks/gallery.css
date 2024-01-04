@@ -1,0 +1,10 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery__image {
+  width: 284px;
+  height: 213px;
+}
