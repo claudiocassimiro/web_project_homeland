@@ -1,0 +1,117 @@
+.city-cards {
+  display: flex;
+  flex-direction: column;
+  margin: 92px 0 auto;
+  gap: 31px;
+}
+
+.city-cards__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  grid-template-areas:
+    "title subtitle"
+    "image description"
+    "button description"
+    "span description";
+}
+
+.city-cards__title {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 76px;
+  margin: 0;
+  max-width: 480px;
+  grid-area: title;
+}
+
+.city-cards__subtitle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: subtitle;
+}
+
+.city-cards__subtitle-label {
+  color: #aaaaaa;
+  font-size: 12px;
+  line-height: 14.53px;
+  letter-spacing: 12%;
+}
+
+.city-cards__subtitle {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.city-cards__city-image {
+  width: 100%;
+  height: 100%;
+  max-width: 460px;
+  max-height: 460px;
+  grid-area: image;
+}
+
+.city-cards__description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  grid-area: description;
+}
+
+.city-cards__description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 29.34px;
+  max-width: 484px;
+}
+
+.city-cards__buy-nft-button {
+  background-color: #0278fe;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 21.78px;
+  color: #ffffff;
+  width: 100%;
+  height: 48px;
+  max-width: 355px;
+  border: none;
+  outline: none;
+  grid-row-start: 3;
+  grid-area: button;
+}
+
+@media screen and (max-width: 1024px) {
+  .city-cards__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .city-cards__description {
+    font-size: 16px;
+    line-height: 26.08px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .city-cards__wrapper {
+    margin: 62px 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "title"
+      "subtitle"
+      "image"
+      "description"
+      "button";
+  }
+
+  .city-cards__title {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .city-cards__buy-nft-button {
+    max-width: unset;
+  }
+}
